@@ -38,6 +38,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/places", async (req, res) => {
+  console.log("✅ /places HIT", req.body);
   const { lat, lng, mood } = req.body;
 
   if (!lat || !lng) {
